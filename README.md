@@ -7,7 +7,7 @@ Integrantes del equipo y rol a tomar:
 - 
 - Natalia Gómez Rojo - Senior
 
- Contexto y Problema:
+Contexto y Problema:
 Actualmente, en los negocios de aplicación de pestañas no existe una herramienta organizada que permita gestionar la información de las clientas y controlar al mismo tiempo el inventario de insumos. En consecuencia, se necesita un sistema que registre a las clientas y vincule automáticamente sus solicitudes con el inventario, de manera que la lashista sepa de inmediato si puede realizar el diseño elegido según los productos disponibles, y el sistema descuente automáticamente lo utilizado en cada aplicación.
 
  - Problemas a resolver:
@@ -34,6 +34,8 @@ Actualmente, en los negocios de aplicación de pestañas no existe una herramien
      - El sistema indica cuánto costaría reabastecer los insumos faltantes.
 
  5-. Interfaz práctica para la lashista
- 
+
  6-. Optimización del negocio
 
+Reglas del Negocio:
+Al indicar el tipo de diseño y aplicación unicamente se pueden realizar con el Blister de acuerdo 
