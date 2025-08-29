@@ -38,6 +38,7 @@ Actualmente, en los negocios de aplicación de pestañas no existe una herramien
  6-. Optimización del negocio
 
 Reglas del Negocio:
+
 1-. Al indicar el tipo de diseño y aplicación únicamente se pueden realizar con el Blister de acuerdo al tipo de aplicación elegido.
 
 2-. Se deben respetar las medidas requeridas para cada diseño.
