@@ -3,8 +3,8 @@
 Integrantes del equipo y rol a tomar:
 - Diego Gutiérrez Yáñez - Mid
 - José Alberto Hernández Castillo - Mid
-- 
-- 
+- Héctor Emilio Cruz - Junior
+- Laura Paola Torres Lozano - Junior
 - Natalia Gómez Rojo - Senior
 
 Contexto y Problema:
@@ -38,4 +38,24 @@ Actualmente, en los negocios de aplicación de pestañas no existe una herramien
  6-. Optimización del negocio
 
 Reglas del Negocio:
-Al indicar el tipo de diseño y aplicación unicamente se pueden realizar con el Blister de acuerdo 
+
+1-. Al indicar el tipo de diseño y aplicación únicamente se pueden realizar con el Blister de acuerdo al tipo de aplicación elegido.
+
+2-. Se deben respetar las medidas requeridas para cada diseño.
+
+3-. Cada clienta registrada debe incluir obligatoriamente: nombre, edad, tipo de aplicación y diseño.
+
+4-. El sistema debe asociar cada tipo de aplicación con la cantidad exacta de insumos necesarios.
+
+5-. No se permitirá confirmar un servicio si el inventario no tiene la cantidad suficiente de insumos.
+
+6-. En caso de inventario insuficiente, el sistema debe mostrar: insumo faltante, cantidad necesaria y costo estimado de reposición.
+
+7-. El inventario debe descontarse automáticamente después de cada aplicación.
+
+8.- El sistema debe permitir consultar en cualquier momento el stock disponible por insumo (blisters, tiras, pegamento, microbrush, etc.).
+
+9-. La lashista será la usuaria principal y tendrá acceso tanto al registro de clientas como al control de inventario.
+
+
+
