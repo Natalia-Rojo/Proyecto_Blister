@@ -3,8 +3,8 @@
 Integrantes del equipo y rol a tomar:
 - Diego Gutiérrez Yáñez - Mid
 - José Alberto Hernández Castillo - Mid
-- 
-- 
+- Héctor Emilio Cruz - Junior
+- Laura PaOLA Torres Lozano - Junior
 - Natalia Gómez Rojo - Senior
 
 Contexto y Problema:
@@ -38,4 +38,3 @@ Actualmente, en los negocios de aplicación de pestañas no existe una herramien
  6-. Optimización del negocio
 
 Reglas del Negocio:
-Al indicar el tipo de diseño y aplicación unicamente se pueden realizar con el Blister de acuerdo 
