@@ -60,3 +60,15 @@ while opcion != "4":
         print("Saliendo del programa.")
     else:
         print("Opción no válida. Elige del 1 al 4.")
+
+
+# Se va adescontar lo que se usa en cada aplicacion obligatoriamente
+
+def recursos_obligatorios(inventario, sesiones=1):
+    for i in range(sesiones):
+        for item, datos in inventario.items():
+            if datos["stock"] >= datos["uso"]:
+                datos["stock"] -= datos["uso"]
+            else:
+                print(f" No hay suficiente stock de {item}.")
+    
