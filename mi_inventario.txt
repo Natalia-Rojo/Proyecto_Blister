@@ -1,0 +1,26 @@
+--- Inventario de Blisters ---
+Blister W: 4 disponibles, $141 c/u
+Blister YY: 4 disponibles, $135 c/u
+Blister Volumen: 4 disponibles, $300 c/u
+Blister Clásicas: 4 disponibles, $100 c/u
+--- Tipos de aplicación ---
+Volumen - usa Blister Volumen
+Volumen Griego - usa Blister W
+Volumen Hawaiiano - usa Blister YY
+Efecto Rimel - usa Blister Clásicas
+--- Diseños ---
+Cat eye: medidas [14, 13, 11, 10, 9, 8] - gasto media tira
+Open eye: medidas [13, 12, 10, 9] - gasto media tira
+Natural: medidas [12, 11, 10, 9, 8] - gasto media tira
+Fox eye: medidas [13, 12, 11, 10, 9, 8] - gasto un cuarto de tira
+--- Materiales ---
+Microbrush: 1 paquete(s), precio $30
+Lip Brush: 1 paquete(s), precio $32
+Cepillos: 1 paquete(s), precio $36
+Bonder: 1 paquete(s), precio $260
+Pegamento: 1 paquete(s), precio $300
+Anillos para pegamento: 1 paquete(s), precio $65
+Pads de microfibra: 1 paquete(s), precio $210
+Cubrebocas: 1 paquete(s), precio $218
+Guantes de latex: 1 paquete(s), precio $200
+Cinta Micropore: 1 paquete(s), precio $40
