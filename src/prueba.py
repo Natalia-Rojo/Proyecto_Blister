@@ -1,9 +1,8 @@
 #Informacion personal y de contacto
 
-
-contador_clientes = 0
-num_clientes = int(input("Cuantos clientes va a registrar? "))
-while contador_clientes <= num_clientes:
+contador_clientes=0
+num_clientes=int(input("Cuantos clientes va a registrar? "))
+while contador_clientes<num_clientes:
     contador_clientes=contador_clientes+1
     print ("Registro de la persona: ", contador_clientes)
 
