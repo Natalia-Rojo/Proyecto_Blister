@@ -1,3 +1,4 @@
+import pdb
 # Inventario inicial(del 8 al 14, cada medida con 3 tiras)
 inventario = {medida: 3 for medida in range(8, 15)}
 
@@ -10,8 +11,8 @@ diseños = {
 }
 aplicaciones = {
     "volumen griego": [14, 13, 12, 11, 10, 9, 8],
-    "volumen hawaiiano": [14, 13, 12, 11, 10, 9, 8]
-    "volumen": [14, 13, 12, 11, 10, 9]
+    "volumen hawaiiano": [14, 13, 12, 11, 10, 9, 8],
+    "volumen": [14, 13, 12, 11, 10, 9],
     "efecto rimel": [14, 13, 12, 11, 10, 9, 8]
 }
 
@@ -40,7 +41,7 @@ def usar_diseño(nombre_diseño):
 def usar_aplicacion(nombre_aplicacion):
     if nombre_aplicacion in aplicaciones:
         print(f"Aplicando diseño: {nombre_aplicacion}")
-        for medida in diseños[nombre_aplicacion]:
+        for medida in aplicaciones[nombre_aplicacion]:
             usar_tiras(medida)
     else:
         print("Ese diseño no está registrado.")
@@ -50,7 +51,8 @@ def mostrar_menu():
     print("1. Mostrar inventario")
     print("2. Usar tiras por medida")
     print("3. Usar diseño predeterminado")
-    print("4. Salir")
+    print("4. Usar tipo de aplicacion predeterminado")
+    print("5. Salir")
     return input("Elige una opción: ")
 
 # Programa principal
@@ -62,15 +64,15 @@ while opcion != "5":
         mostrar_inventario()
     elif opcion == "2":
         try:
-            medida = int(input("Introduce la medida (8-14mm): "))
+            medida = int(input("Introduce la medida (8-14mm): "\t))
             usar_tiras(medida)
         except ValueError:
             print("Por favor, introduce un número válido.")
     elif opcion == "3":
-        diseño = input("Introduce el nombre del diseño (cat eye, open eye, natural, fox eye): ").strip().lower()
+        diseño = input("Introduce el nombre del diseño (cat eye, open eye, natural, fox eye): \t").strip().lower()
         usar_diseño(diseño)
     elif opcion == "4":
-        aplicacion = input("Introduce el nombre del diseño (volumen, volumen griego, volumen hawaiiano, efecto rimel): ").strip().lower()
+        aplicacion = input("Introduce el nombre del tipo de aplicacion (volumen, volumen griego, volumen hawaiiano, efecto rimel): \t").strip().lower()
         usar_aplicacion(aplicacion)
 
     elif opcion == "5":
