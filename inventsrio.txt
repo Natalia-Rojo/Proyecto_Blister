@@ -1,5 +1,0 @@
-Extensiones :250
-Pegamento:120
-Removedor:80
-Pinzas :90
-Cepillos:5
