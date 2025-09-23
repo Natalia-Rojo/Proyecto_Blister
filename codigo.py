@@ -1,8 +1,8 @@
 import pdb
 # Inventario inicial(del 8 al 14, cada medida con 3 tiras)
-inventario = {medida: 3 for medida in range(8, 15)}
+medidas = {medida: 3 for medida in range(8, 15)}
 
-# Diseños predeterminados
+# Servicios predeterminados
 diseños = {
     "cat eye": [14, 13, 11, 10, 9, 8],
     "open eye": [13, 12, 10, 9],
@@ -19,15 +19,15 @@ aplicaciones = {
 # Funciones
 def mostrar_inventario():
     print("Inventario actual:")
-    for medida, tiras in sorted(inventario.items(), reverse=True):
+    for medida, tiras in sorted(medidas.items(), reverse=True):
         print(f"Medida {medida}mm: {tiras} tiras")
 
 def usar_tiras(medida, cantidad=1):
-    if medida in inventario:
-        if inventario[medida] >= cantidad:
-            inventario[medida] -= cantidad
+    if medida in medidas:
+        if medidas[medida] >= cantidad:
+            medidas[medida] -= cantidad
         else:
-            print(f"No hay suficientes tiras de {medida}mm (quedan {inventario[medida]}).")
+            print(f"No hay suficientes tiras de {medida}mm (quedan {medidas[medida]}).")
     else:
         print(f"La medida {medida}mm no existe en el inventario.")
 
@@ -53,11 +53,13 @@ def mostrar_menu():
     print("3. Usar diseño predeterminado")
     print("4. Usar tipo de aplicacion predeterminado")
     print("5. Salir")
-    return input("Elige una opción: ")
+    return input("Elige una opción: \t")
 
 # Programa principal
+control=0
+clientes=int(input("¿Cuántos clientes va a registrar?"))
 opcion = ""
-while opcion != "5":
+while control<clientes:
     opcion = mostrar_menu()
 
     if opcion == "1":
@@ -76,16 +78,18 @@ while opcion != "5":
         usar_aplicacion(aplicacion)
 
     elif opcion == "5":
-        print("Saliendo del programa.")
+        print("Programa cancelado.")
+        break
     else:
         print("Opción no válida. Elige del 1 al 4.")
+    control+=1
 
 
 # Se va adescontar lo que se usa en cada aplicacion obligatoriamente
 
-def recursos_obligatorios(inventario, sesiones=1):
+def recursos_obligatorios(medidas, sesiones=1):
     for i in range(sesiones):
-        for item, datos in inventario.items():
+        for item, datos in medidas.items():
             if datos["stock"] >= datos["uso"]:
                 datos["stock"] -= datos["uso"]
             else:
