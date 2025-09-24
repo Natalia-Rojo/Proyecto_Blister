@@ -36,29 +36,6 @@ def mostrar_inventario():
     for producto, datos in inventario.items():
         print(f"- {producto}: {datos['cantidad']} {datos['unidad']} | Precio: ${datos['precio']}")
 
-
-def agregar_producto():
-    nombre = input("\nIngresa el nombre del nuevo producto: ")
-    cantidad = int(input("Cantidad inicial: "))
-    precio = int(input("Precio: "))
-    unidad = input("Unidad (pzs, ml, metros, etc.): ")
-    inventario[nombre] = {"cantidad": cantidad, "precio": precio, "unidad": unidad}
-    print(f" Producto '{nombre}' agregado correctamente.")
-
-
-def usar_producto():
-    nombre = input("\nIngresa el nombre del producto que quieres usar: ")
-    if nombre in inventario:
-        cantidad_usada = int(input("¿Cuánto deseas usar?: "))
-        if cantidad_usada <= inventario[nombre]["cantidad"]:
-            inventario[nombre]["cantidad"] -= cantidad_usada
-            print(f" Se usaron {cantidad_usada} {inventario[nombre]['unidad']} de '{nombre}'.")
-        else:
-            print(" No hay suficiente stock disponible.")
-    else:
-        print(" El producto no existe en el inventario.")
-
-
 def recursos_obligatorios(inventario, sesiones=1):
     for i in range(sesiones):
         for item, datos in inventario.items():
