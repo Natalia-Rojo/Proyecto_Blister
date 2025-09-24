@@ -48,7 +48,7 @@ def recursos_obligatorios(inventario, sesiones=1):
 
 def reabastecer():
     while True:
-        producto_reabas = input( "Ingrese el productor que va reabastecer: ").strip().lower()
+        producto_reabas = input( "Ingrese el producto que va reabastecer: ").strip().lower()
         if producto_reabas in inventario:
             cantidad_reabas = int(input( "Cuanto va reabastecer? "))
             inventario[producto_reabas]["cantidad"] += cantidad_reabas
@@ -118,7 +118,7 @@ while opcion!=7:
             medida = int(input("Introduce la medida (8 - 14mm): \t"))
             usar_tiras(medida)
         except ValueError:
-            print("Por favor, introduce un número válido.")
+            print("Por favor, introduce un número entero.")
 
     elif opcion == "3":
         while True:
