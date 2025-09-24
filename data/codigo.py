@@ -2,16 +2,16 @@ import pdb
 # Inventario de RedSlash
 
 inventario = {
-    "Microbrush": {"cantidad": 100, "uso": 1, "precio": 30, "unidad": "pieza"},
-    "Lip Brush": {"cantidad": 100, "uso": 1, "precio": 32, "unidad": "pieza"},
-    "Cepillos": {"cantidad": 50, "uso": 1, "precio": 36, "unidad": "pieza"},
-    "Bonder": {"cantidad": 15, "uso": 0.15, "precio": 260, "unidad": "mililitros"},
-    "Pegamento": {"cantidad": 5, "uso": 0.15, "precio": 300, "unidad": "mililitros"},
-    "Anillos para pegamento": {"cantidad": 25, "uso": 1, "precio": 65, "unidad": "pieza"},
-    "Pads de microfibra": {"cantidad": 200, "uso": 2, "precio": 210, "unidad": "pieza"},
-    "Cubrebocas": {"cantidad": 100, "uso": 1, "precio": 218, "unidad": "pieza"},
-    "Guantes de latex": {"cantidad": 100, "uso": 2, "precio": 200, "unidad": "pieza"},
-    "Cinta Micropore": {"cantidad": 9, "uso": 0.30, "precio": 40, "unidad": "metros"},
+    "microbrush": {"cantidad": 100, "uso": 1, "precio": 30, "unidad": "pieza"},
+    "lip Brush": {"cantidad": 100, "uso": 1, "precio": 32, "unidad": "pieza"},
+    "cepillos": {"cantidad": 50, "uso": 1, "precio": 36, "unidad": "pieza"},
+    "bonder": {"cantidad": 15, "uso": 0.15, "precio": 260, "unidad": "mililitros"},
+    "pegamento": {"cantidad": 5, "uso": 0.15, "precio": 300, "unidad": "mililitros"},
+    "anillos para pegamento": {"cantidad": 25, "uso": 1, "precio": 65, "unidad": "pieza"},
+    "pads de microfibra": {"cantidad": 200, "uso": 2, "precio": 210, "unidad": "pieza"},
+    "cubrebocas": {"cantidad": 100, "uso": 1, "precio": 218, "unidad": "pieza"},
+    "guantes de latex": {"cantidad": 100, "uso": 2, "precio": 200, "unidad": "pieza"},
+    "cinta micropore": {"cantidad": 9, "uso": 0.30, "precio": 40, "unidad": "metros"},
 }
 
 medidas = {medida: 3 for medida in range(8, 15)}
@@ -71,7 +71,7 @@ def recursos_obligatorios(inventario, sesiones=1):
 
 def reabastecer():
     while True:
-        producto_reabas = input( "Ingrese el productor que va reabastecer: ")
+        producto_reabas = input( "Ingrese el productor que va reabastecer: ").strip().lower()
         if producto_reabas in inventario:
             cantidad_reabas = int(input( "Cuanto va reabastecer? "))
             inventario[producto_reabas]["cantidad"] += cantidad_reabas
@@ -128,10 +128,8 @@ def mostrar_menu():
 #Funciones del inventario
 
 # Programa principal
-control=0
-clientes=int(input("¿Cuántos clientes va a registrar?: "))
 opcion = ""
-while control<clientes:
+while opcion!=7:
     opcion = mostrar_menu()
 
     if opcion == "1":
@@ -177,7 +175,6 @@ while control<clientes:
         recursos_obligatorios(inventario)
     elif opcion == "7":
         print("Programa cancelado.")
-        break
     else:
         print("Opción no válida. Elige del 1 al 7.")
     control+=1
