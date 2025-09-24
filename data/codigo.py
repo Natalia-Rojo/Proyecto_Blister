@@ -129,7 +129,7 @@ def mostrar_menu():
 
 # Programa principal
 control=0
-clientes=int(input("¿Cuántos clientes va a registrar?"))
+clientes=int(input("¿Cuántos clientes va a registrar?: "))
 opcion = ""
 while control<clientes:
     opcion = mostrar_menu()
@@ -137,18 +137,40 @@ while control<clientes:
     if opcion == "1":
         mostrar_inventario()
         mostrar_medidas()
+
     elif opcion == "2":
         try:
-            medida = int(input("Introduce la medida (8-14mm): \t"))
+            medida = int(input("Introduce la medida (8 - 14mm): \t"))
             usar_tiras(medida)
         except ValueError:
             print("Por favor, introduce un número válido.")
+
     elif opcion == "3":
-        diseño = input("Introduce el nombre del diseño (cat eye, open eye, natural, fox eye): \t").strip().lower()
-        usar_diseño(diseño)
+        while True:
+            try:
+                diseño = input("Introduce el nombre del diseño (Cat eye, Open eye, Natural, Fox eye): \t")
+                diseño = diseño.strip().lower()
+                if diseño in diseños:
+                    usar_diseño(diseño)
+                    break
+                else:
+                    print ("\nEste diseño no está registrado o se encuentra mal escrito. Intenta de nuevo \n")
+            except Exception as e:
+                print (f"Ocurrio un error: {e}. Intenta de nuevo \n")
+
     elif opcion == "4":
-        aplicacion = input("Introduce el nombre del tipo de aplicacion (volumen, volumen griego, volumen hawaiiano, efecto rimel): \t").strip().lower()
-        usar_aplicacion(aplicacion)
+        while True:
+            try:
+                aplicacion = input("Introduce el nombre del tipo de aplicacion (Volumen, Volumen griego, Volumen hawaiiano, Efecto rimel): \t")
+                aplicacion = aplicacion.strip().lower()
+                if aplicacion in aplicaciones:
+                    usar_aplicacion(aplicacion)
+                    break
+                else:
+                    print ("Esta aplicacion no está registrada o se encuentra mal escrita. Intenta de nuevo \n")
+            except Exception as e:
+              print (f"Ocurrio un error: {e}. Intenta de nuevo \n")  
+
     elif opcion == "5":
         reabastecer()
     elif opcion == "6":
@@ -157,5 +179,5 @@ while control<clientes:
         print("Programa cancelado.")
         break
     else:
-        print("Opción no válida. Elige del 1 al 4.")
+        print("Opción no válida. Elige del 1 al 7.")
     control+=1
