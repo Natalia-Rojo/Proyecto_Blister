@@ -2,16 +2,16 @@ import pdb
 # Inventario de RedSlash
 
 inventario = {
-    "Microbrush": {"cantidad": 100, "precio": 30, "unidad": "pieza"},
-    "Lip Brush": {"cantidad": 100, "precio": 32, "unidad": "pieza"},
-    "Cepillos": {"cantidad": 50, "precio": 36, "unidad": "pieza"},
-    "Bonder": {"cantidad": 15, "precio": 260, "unidad": "mililitros"},
-    "Pegamento": {"cantidad": 5, "precio": 300, "unidad": "mililitros"},
-    "Anillos para pegamento": {"cantidad": 25, "precio": 65, "unidad": "pieza"},
-    "Pads de microfibra": {"cantidad": 200, "precio": 210, "unidad": "pieza"},
-    "Cubrebocas": {"cantidad": 100, "precio": 218, "unidad": "pieza"},
-    "Guantes de latex": {"cantidad": 100, "precio": 200, "unidad": "pieza"},
-    "Cinta Micropore": {"cantidad": 9, "precio": 40, "unidad": "metros"},
+    "Microbrush": {"cantidad": 100, "uso": 1, "precio": 30, "unidad": "pieza"},
+    "Lip Brush": {"cantidad": 100, "uso": 1, "precio": 32, "unidad": "pieza"},
+    "Cepillos": {"cantidad": 50, "uso": 1, "precio": 36, "unidad": "pieza"},
+    "Bonder": {"cantidad": 15, "uso": 0.15, "precio": 260, "unidad": "mililitros"},
+    "Pegamento": {"cantidad": 5, "uso": 0.15, "precio": 300, "unidad": "mililitros"},
+    "Anillos para pegamento": {"cantidad": 25, "uso": 1, "precio": 65, "unidad": "pieza"},
+    "Pads de microfibra": {"cantidad": 200, "uso": 2, "precio": 210, "unidad": "pieza"},
+    "Cubrebocas": {"cantidad": 100, "uso": 1, "precio": 218, "unidad": "pieza"},
+    "Guantes de latex": {"cantidad": 100, "uso": 2, "precio": 200, "unidad": "pieza"},
+    "Cinta Micropore": {"cantidad": 9, "uso": 0.30, "precio": 40, "unidad": "metros"},
 }
 
 medidas = {medida: 3 for medida in range(8, 15)}
@@ -66,6 +66,7 @@ def recursos_obligatorios(inventario, sesiones=1):
                 datos["cantidad"] -= datos["uso"]
             else:
                 print(f" No hay suficiente inventario de {item}.")
+    print ("\nSe han descontado los productos obligatorios\n")
 
 
 def reabastecer():
