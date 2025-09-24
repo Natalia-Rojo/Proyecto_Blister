@@ -59,6 +59,14 @@ def usar_producto():
         print(" El producto no existe en el inventario.")
 
 
+def recursos_obligatorios(inventario, sesiones=1):
+    for i in range(sesiones):
+        for item, datos in inventario.items():
+            if datos["cantidad"] >= datos["uso"]:
+                datos["cantidad"] -= datos["uso"]
+            else:
+                print(f" No hay suficiente inventario de {item}.")
+
 
 def reabastecer():
     while True:
@@ -70,11 +78,13 @@ def reabastecer():
         else: 
             print ("No en el inventario")
 
+
 #Funciones de los sevicios
 def mostrar_medidas():
     print("Inventario actual:")
     for medida, tiras in sorted(medidas.items(), reverse=True):
         print(f"Medida {medida}mm: {tiras} tiras")
+
 
 def usar_tiras(medida, cantidad=1):
     if medida in medidas:
@@ -85,6 +95,7 @@ def usar_tiras(medida, cantidad=1):
     else:
         print(f"La medida {medida}mm no existe en el inventario.")
 
+
 def usar_diseño(nombre_diseño):
     if nombre_diseño in diseños:
         print(f"Aplicando diseño: {nombre_diseño}")
@@ -92,6 +103,8 @@ def usar_diseño(nombre_diseño):
             usar_tiras(medida)
     else:
         print("Ese diseño no está registrado.")
+
+
 def usar_aplicacion(nombre_aplicacion):
     if nombre_aplicacion in aplicaciones:
         print(f"Aplicando diseño: {nombre_aplicacion}")
@@ -100,6 +113,7 @@ def usar_aplicacion(nombre_aplicacion):
     else:
         print("Ese diseño no está registrado.")
 
+
 def mostrar_menu():
     print("--- Menú de operaciones ---")
     print("1. Mostrar inventario")
@@ -107,7 +121,8 @@ def mostrar_menu():
     print("3. Usar diseño predeterminado")
     print("4. Usar tipo de aplicacion predeterminado")
     print("5. Reabastecer inventario")
-    print("6. Salir")
+    print("6. Descontado de productos obligatorios")
+    print("7. Salir")
     return input("Elige una opción: \t")
 #Funciones del inventario
 
@@ -123,7 +138,7 @@ while control<clientes:
         mostrar_medidas()
     elif opcion == "2":
         try:
-            medida = int(input("Introduce la medida (8-14mm): "\t))
+            medida = int(input("Introduce la medida (8-14mm): \t"))
             usar_tiras(medida)
         except ValueError:
             print("Por favor, introduce un número válido.")
@@ -136,20 +151,10 @@ while control<clientes:
     elif opcion == "5":
         reabastecer()
     elif opcion == "6":
+        recursos_obligatorios(inventario)
+    elif opcion == "7":
         print("Programa cancelado.")
         break
     else:
         print("Opción no válida. Elige del 1 al 4.")
     control+=1
-
-
-# Se va adescontar lo que se usa en cada aplicacion obligatoriamente
-
-def recursos_obligatorios(medidas, sesiones=1):
-    for i in range(sesiones):
-        for item, datos in medidas.items():
-            if datos["stock"] >= datos["uso"]:
-                datos["stock"] -= datos["uso"]
-            else:
-                print(f" No hay suficiente stock de {item}.")
-    
