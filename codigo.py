@@ -123,7 +123,7 @@ while control<clientes:
         mostrar_medidas()
     elif opcion == "2":
         try:
-            medida = int(input("Introduce la medida (8-14mm): "\t))
+            medida = int(input("Introduce la medida (8-14mm): \t"))
             usar_tiras(medida)
         except ValueError:
             print("Por favor, introduce un número válido.")
