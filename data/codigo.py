@@ -57,7 +57,7 @@ def reabastecer():
             print ("No en el inventario")
 
 
-#Funciones de los sevicios
+#Funciones de los servicios
 def mostrar_medidas():
     print("Inventario actual:")
     for medida, tiras in sorted(medidas.items(), reverse=True):
@@ -96,13 +96,78 @@ def mostrar_menu():
     print("--- Menú de operaciones ---")
     print("1. Mostrar inventario")
     print("2. Usar tiras por medida")
-    print("3. Usar diseño predeterminado")
-    print("4. Usar tipo de aplicacion predeterminado")
+    print("3. Registrar cliente")
+    print("4. Mostrar clientes registrados")
     print("5. Reabastecer inventario")
     print("6. Descontado de productos obligatorios")
     print("7. Salir")
     return input("Elige una opción: \t")
-#Funciones del inventario
+
+# Servicios predeterminados
+
+clientes = []
+
+def registrar_cliente():
+    print("\n--- Registro de nuevo cliente ---")
+    nombre = input("Nombre: ")
+    edad = int(input("Edad: "))
+    fecha = input("Fecha de aplicación (dd/mm/aaaa): ")
+    diseño = input("Diseño: ")
+    telefono = input("Número de teléfono: ")
+    aplicacion = input("Tipo de aplicación: ")
+    orden = input("Desea tipo de aplicación o un tipo de diseño (aplicación = a y diseño = b)").strip().lower()
+    if orden == "a":
+        while True:
+            try:
+                aplicacion = input("Introduce el nombre del tipo de aplicacion (Volumen, Volumen griego, Volumen hawaiiano, Efecto rimel): \t")
+                aplicacion = aplicacion.strip().lower()
+                if aplicacion in aplicaciones:
+                    usar_aplicacion(aplicacion)
+                    cliente["tipo de aplicacion"] = aplicacion
+                    break
+                else:
+                    print ("Esta aplicacion no está registrada o se encuentra mal escrita. Intenta de nuevo \n")
+            except Exception as e:
+              print (f"Ocurrio un error: {e}. Intenta de nuevo \n")  
+    if orden == "b":
+        while True:
+            try:
+                diseño = input("Introduce el nombre del diseño (Cat eye, Open eye, Natural, Fox eye): \t")
+                diseño = diseño.strip().lower()
+                if diseño in diseños:
+                    usar_diseño(diseño)
+                    cliente["tipo de diseño"] = diseño
+                    break
+                else:
+                    print ("\nEste diseño no está registrado o se encuentra mal escrito. Intenta de nuevo \n")
+            except Exception as e:
+                print (f"Ocurrio un error: {e}. Intenta de nuevo \n")
+       
+
+
+    cliente = {
+        "nombre": nombre,
+        "edad": edad,
+        "fecha": fecha,
+        "diseño": diseño,
+        "tipo": aplicacion,
+        "telefono": telefono
+    
+    }
+
+    clientes.append(cliente)
+    print(f" Cliente '{nombre}' registrado correctamente.")
+
+def mostrar_clientes():
+    print("\n Lista de clientes:")
+    if len(clientes) == 0:
+        print("No hay clientes registrados.")
+    else:
+        for i, cliente in enumerate(clientes, start=1):
+            print(f"\nCliente {i}:")
+            for clave, valor in cliente.items():
+                print(f"  {clave.capitalize()}: {valor}")
+
 
 # Programa principal
 opcion = ""
@@ -121,30 +186,9 @@ while opcion!=7:
             print("Por favor, introduce un número entero.")
 
     elif opcion == "3":
-        while True:
-            try:
-                diseño = input("Introduce el nombre del diseño (Cat eye, Open eye, Natural, Fox eye): \t")
-                diseño = diseño.strip().lower()
-                if diseño in diseños:
-                    usar_diseño(diseño)
-                    break
-                else:
-                    print ("\nEste diseño no está registrado o se encuentra mal escrito. Intenta de nuevo \n")
-            except Exception as e:
-                print (f"Ocurrio un error: {e}. Intenta de nuevo \n")
-
+        registrar_cliente()
     elif opcion == "4":
-        while True:
-            try:
-                aplicacion = input("Introduce el nombre del tipo de aplicacion (Volumen, Volumen griego, Volumen hawaiiano, Efecto rimel): \t")
-                aplicacion = aplicacion.strip().lower()
-                if aplicacion in aplicaciones:
-                    usar_aplicacion(aplicacion)
-                    break
-                else:
-                    print ("Esta aplicacion no está registrada o se encuentra mal escrita. Intenta de nuevo \n")
-            except Exception as e:
-              print (f"Ocurrio un error: {e}. Intenta de nuevo \n")  
+        mostrar_clientes()
 
     elif opcion == "5":
         reabastecer()
