@@ -154,6 +154,20 @@ def reabastecer():
         else: 
             print ("No en el inventario")
 
+#Funcion de reporte final
+def generar_reporte_final(nombre_archivo="reporte_final.txt"):
+    with open(nombre_archivo, "w", encoding="utf-8") as f:
+        f.write("--- Inventario ---\n")
+        f.write(f"{'Nombre':25} {'cantidad':>5} {'precio':>7} {'uso':>8}\n")
+        f.write("-" * 65 + "\n")
+        for nombre, datos in inventario.items():
+            f.write(f"{nombre:25} {datos['cantidad']:>5} ${datos['precio']:>6} {str(datos['uso']):>8}\n")
+        f.write("\n")
+
+    print("Reporte final guardado como reporte_final.txt\n")
+
+
+
 # Opciones de Menú
 
 def mostrar_menu():
@@ -181,22 +195,22 @@ while opcion!=7:
 
     if opcion == "1":
         registrar_cliente()
-    if opcion == "2":
+    elif opcion == "2":
         mostrar_clientes()
-    if opcion == "3":
+    elif opcion == "3":
         try:
             medida = int(input("Introduce la medida (8 - 14mm): \t"))
             usar_tiras(medida)
         except ValueError:
             print("Por favor, introduce un número entero.")
-    if opcion == "4":
+    elif opcion == "4":
         mostrar_inventario()
         mostrar_medidas()
-    if opcion == "5":
+    elif opcion == "5":
         reabastecer()
-    if opcion == "6":
-        reporte_final()
-    if opcion == "7":
+    elif opcion == "6":
+        generar_reporte_final()
+    elif opcion == "7":
         print("\nPrograma cancelado.\n")
     else:
         print("\n Opción no válida. Elige solo la opcion del 1 al 7.\n")
