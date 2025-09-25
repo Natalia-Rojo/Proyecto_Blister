@@ -36,42 +36,38 @@ aplicaciones = {
 clientes = []
 
 def registrar_cliente():
-    print("\n--- Registro de nuevo cliente ---")
+    print("\n--- Registro de nueva clienta ---")
     nombre = input("Nombre: ")
     edad = int(input("Edad: "))
-    fecha = input("Fecha de aplicación (dd/mm/aaaa): ")
-    diseño = input("Diseño: ")
     telefono = input("Número de teléfono: ")
-    aplicacion = input("Tipo de aplicación: ")
-    orden = input("Desea tipo de aplicación o un tipo de diseño (aplicación = a y diseño = b)").strip().lower()
-    if orden == "a":
-        while True:
-            try:
-                aplicacion = input("Introduce el nombre del tipo de aplicacion (Volumen, Volumen griego, Volumen hawaiiano, Efecto rimel): \t")
-                aplicacion = aplicacion.strip().lower()
-                if aplicacion in aplicaciones:
-                    usar_aplicacion(aplicacion)
-                    cliente["tipo de aplicacion"] = aplicacion
-                    break
-                else:
-                    print ("Esta aplicacion no está registrada o se encuentra mal escrita. Intenta de nuevo \n")
-            except Exception as e:
-              print (f"Ocurrio un error: {e}. Intenta de nuevo \n")  
-    if orden == "b":
-        while True:
-            try:
-                diseño = input("Introduce el nombre del diseño (Cat eye, Open eye, Natural, Fox eye): \t")
-                diseño = diseño.strip().lower()
-                if diseño in diseños:
-                    usar_diseño(diseño)
-                    cliente["tipo de diseño"] = diseño
-                    break
-                else:
-                    print ("\nEste diseño no está registrado o se encuentra mal escrito. Intenta de nuevo \n")
-            except Exception as e:
-                print (f"Ocurrio un error: {e}. Intenta de nuevo \n")
-       
+    fecha = input("Fecha de aplicación (dd/mm/aaaa): ")
+    
+    while True:
+        try:
+            aplicacion = input("Introduce el nombre del tipo de aplicacion (Volumen, Volumen griego, Volumen hawaiiano, Efecto rimel): \t")
+            aplicacion = aplicacion.strip().lower()
+            if aplicacion in aplicaciones:
+                usar_aplicacion(aplicacion)
+                break
+            else:
+                print("Esta aplicacion no está registrada o se encuentra mal escrita. Intenta de nuevo \n")
+        except Exception as e:
+            print(f"Ocurrio un error: {e}. Intenta de nuevo \n")  
+   
+    while True:
+        try:
+            diseño = input("Introduce el nombre del diseño (Cat eye, Open eye, Natural, Fox eye): \t")
+            diseño = diseño.strip().lower()
+            if diseño in diseños:
+                usar_diseño(diseño)
+                break
+            else:
+                print("\nEste diseño no está registrado o se encuentra mal escrito. Intenta de nuevo \n")
+        except Exception as e:
+            print(f"Ocurrio un error: {e}. Intenta de nuevo \n")
 
+    # Se llama a la funcion para descontar recursos obligatorios automáticamente al registrar la clienta
+    recursos_obligatorios(inventario)
 
     cliente = {
         "nombre": nombre,
@@ -84,6 +80,8 @@ def registrar_cliente():
 
     clientes.append(cliente)
     print(f" Cliente '{nombre}' registrado correctamente.")
+
+
 
 def mostrar_clientes():
     print("\n Lista de clientes:")
@@ -105,7 +103,24 @@ def recursos_obligatorios(inventario, sesiones=1):
     print ("\nSe han descontado los productos obligatorios\n")
 
 
+#Funciones de los servicios
 
+def usar_diseño(nombre_diseño):
+    if nombre_diseño in diseños:
+        print(f"Diseño seleccionado diseño: {nombre_diseño}")
+        for medida in diseños[nombre_diseño]:
+            usar_tiras(medida)
+    else:
+        print("Ese diseño no está registrado.")
+
+
+def usar_aplicacion(nombre_aplicacion):
+    if nombre_aplicacion in aplicaciones:
+        print(f"Tipo de aplicación seleccionada: {nombre_aplicacion}")
+        for medida in aplicaciones[nombre_aplicacion]:
+            usar_tiras(medida)
+    else:
+        print("Ese diseño no está registrado.")
 
 
 # Funciones de Inventario
@@ -139,30 +154,6 @@ def reabastecer():
         else: 
             print ("No en el inventario")
 
-
-
-
-#Funciones de los servicios
-
-def usar_diseño(nombre_diseño):
-    if nombre_diseño in diseños:
-        print(f"Aplicando diseño: {nombre_diseño}")
-        for medida in diseños[nombre_diseño]:
-            usar_tiras(medida)
-    else:
-        print("Ese diseño no está registrado.")
-
-
-def usar_aplicacion(nombre_aplicacion):
-    if nombre_aplicacion in aplicaciones:
-        print(f"Aplicando diseño: {nombre_aplicacion}")
-        for medida in aplicaciones[nombre_aplicacion]:
-            usar_tiras(medida)
-    else:
-        print("Ese diseño no está registrado.")
-
-
-
 # Opciones de Menú
 
 def mostrar_menu():
@@ -182,6 +173,8 @@ def mostrar_menu():
 # Añadir la funcion de reporte final
 
 # Ejecución del menú
+
+
 opcion = ""
 while opcion!=7:
     opcion = mostrar_menu()
@@ -207,5 +200,5 @@ while opcion!=7:
         print("\nPrograma cancelado.\n")
     else:
         print("\n Opción no válida. Elige solo la opcion del 1 al 7.\n")
-    control += 1
+
 
