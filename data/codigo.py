@@ -31,12 +31,12 @@ aplicaciones = {
     "efecto rimel": [14, 13, 12, 11, 10, 9, 8]
 }
 
-# Función de Registro de clientas, eleccion de aplicación, diseño y descontado de productos obligatorios
+# Función de Registro de clientes, eleccion de aplicación, diseño y descontado de productos obligatorios
 
 clientes = []
 
 def registrar_cliente():
-    print("\n--- Registro de nueva clienta ---")
+    print("\n--- Registro de nuevo cliente ---")
     nombre = input("Nombre: ")
     edad = int(input("Edad: "))
     telefono = input("Número de teléfono: ")
@@ -66,7 +66,7 @@ def registrar_cliente():
         except Exception as e:
             print(f"Ocurrio un error: {e}. Intenta de nuevo \n")
 
-    # Se llama a la funcion para descontar recursos obligatorios automáticamente al registrar la clienta
+    # Se llama a la funcion para descontar recursos obligatorios automáticamente al registrar al cliente
     recursos_obligatorios(inventario)
 
     cliente = {
@@ -172,8 +172,8 @@ def generar_reporte_final(nombre_archivo="reporte_final.txt"):
 
 def mostrar_menu():
     print("--- Menú de operaciones ---")
-    print ("1. Registrar Clienta")
-    print ("2. Mostrar Clientas Registardos")
+    print ("1. Registrar Cliente")
+    print ("2. Mostrar Clientes Registrados")
     print ("3. Usar tiras por medida")
     print ("4. Mostrar Inventario")
     print ("5. Reabastecer Inventario")
@@ -183,7 +183,7 @@ def mostrar_menu():
     
     
 
-# Añdir la funcion de descontar productos obligatorios al registro de clienta
+# Añdir la funcion de descontar productos obligatorios al registro de cliente
 # Añadir la funcion de reporte final
 
 # Ejecución del menú
