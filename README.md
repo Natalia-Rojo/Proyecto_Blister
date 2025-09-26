@@ -58,4 +58,30 @@ Reglas del Negocio:
 9-. La lashista será la usuaria principal y tendrá acceso tanto al registro de clientas como al control de inventario.
 
 
+INSTRUCCIONES DE INSTALACIÓN, USO Y EQUIPO
+
+#PRIMER PASO
+![imagen de studio code](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.20.37_506b5096.jpg)
+#SEGUNDO PASO
+![imagen de python](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.20.56_9891080f.jpg)
+# PASO
+![imagen de carpeta](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.21.09_3e6dbe64.jpg)
+#PASO
+![imagen de github](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.21.26_03c9a65f.jpg)
+#PASO
+#PASO
+![imagen de ramas](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.21.43_e8ecca64.jpg)
+#PASO
+![imagne de clone repository](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.23.41_8f5aa651.jpg)
+#PASO
+![imagen de buscador](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.22.02_582a6df2.jpg)
+#PASO
+![imagen de menu carpetas](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.22.23_0ac5dfe8.jpg)
+#PASO
+![imagen de aceptar clonar repositorio](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.22.37_3e43cc5b.jpg)
+#PASO
+![imagen de files](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.23.02_4027ab05.jpg)
+#PASO
+
+
 
