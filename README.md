@@ -60,28 +60,40 @@ Reglas del Negocio:
 
 INSTRUCCIONES DE INSTALACIÓN, USO Y EQUIPO
 
-#PRIMER PASO
+1-. Primero se tiene que contar con la aplicación de Visual Studio Code que vas a usar solo en computadora o en lap top.
 ![imagen de studio code](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.20.37_506b5096.jpg)
-#SEGUNDO PASO
+
+2-. Posteriormente, se debe tener instalado Python pues es el programa con el que se va a ejecutar. 
 ![imagen de python](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.20.56_9891080f.jpg)
-# PASO
+
+3-. Una vez con ambos programas ya instalados se creará en la sección de escritorio una carpeta vacía con el nombre de Redlash (nombre del programa).
 ![imagen de carpeta](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.21.09_3e6dbe64.jpg)
-#PASO
+
+4-. Una vez con la carpeta creada abriremos sesión en GitHub que se puede abrir directamente desde el navegador con el que cuentes. 
 ![imagen de github](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.21.26_03c9a65f.jpg)
-#PASO
-#PASO
+
+5-. Después de haber abierto sesión en GitHub, ingresaremos a este enlace para previsualizar la información del programa.
+https://github.com/Natalia-Rojo/Proyecto_Blister.git
+
+6-. Para clonar el repositorio en Visual Studio se copiará el mismo enlace previamente proporcionado (https://github.com/Natalia-Rojo/Proyecto_Blister.git) y se abrirá la aplicación de Visual Studio, para después localizar el icono de Source Control en la parte posterior izquierda de la pantalla.
 ![imagen de ramas](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.21.43_e8ecca64.jpg)
-#PASO
+
+7-. Posteriormente se dará click en el botón de clonar repositorio.
 ![imagne de clone repository](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.23.41_8f5aa651.jpg)
-#PASO
+
+8-. Después seleccionando la barra de búsqueda en la parte posterior se le dará click.
 ![imagen de buscador](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.22.02_582a6df2.jpg)
-#PASO
+
+9-. Una vez ahí se pegará el enlace copiado anteriormente (https://github.com/Natalia-Rojo/Proyecto_Blister.git) y aparecerá una ventana emergente y se seleccionará la carpeta anteriormente creada seleccionando el botón de select as repository destination.
 ![imagen de menu carpetas](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.22.23_0ac5dfe8.jpg)
-#PASO
+
+10-. Te saldrá una ventana emergente con el mensaje de si quieres abrir el repositorio clonado y le picaras en abrir. 
 ![imagen de aceptar clonar repositorio](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.22.37_3e43cc5b.jpg)
-#PASO
+
+11-. Se puede visualizar el repositorio abierto en Visual Studio, en la parte izquierda de la pantalla deberás hacer click en el icono de unas carpetas donde aparecen una serie de documentos y el README con la información del programa. 
 ![imagen de files](https://github.com/Natalia-Rojo/Proyecto_Blister/blob/eea97566ef55c19de76b068839d63361c5c66fd3/data%20imagenes/Imagen%20de%20WhatsApp%202025-09-25%20a%20las%2023.23.02_4027ab05.jpg)
-#PASO
+
+12-. En la carpeta docs se encuentra el reporte en PDF, manual y diagrama de flujo del código; en la carpeta src se encuentra el código fuente completo y el esqueleto del código; en la carpeta data se encuentran los archivos de prueba del código; en README se encuentra el objetivo del proyecto y roles del equipo. 
 
 
 
